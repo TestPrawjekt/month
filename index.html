@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+<title>Happy Monthsary, Love! ;)</title>
+
+<style>
+:root {
+    --paper-padding-desktop: 80px;
+    --paper-padding-mobile: 24px;
+}
+
+body {
+    margin: 0;
+    font-family: "Bad Script", serif;
+    background: #f2f2f2;
+    overscroll-behavior: none;
+}
+
+.letter {
+    font-family: "Bad Script", serif;
+	font-size: 1.8rem;
+}
+
+/* Lock background scroll when open */
+body.open {
+    overflow: hidden;
+}
+
+/* Center envelope */
+.envelope-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Envelope container */
+.envelope-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+/* Envelope body */
+.envelope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #d4af7a;
+    border-radius: 8px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Label */
+.label {
+    position: absolute;
+    bottom: 36px;
+    left: 24px;
+    background: #f9f5ec;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #333;
+    z-index: 3;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Envelope flap */
+.flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #c49a6c;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top;
+    transition: transform 0.6s ease;
+    z-index: 4;
+}
+
+/* Fullscreen letter */
+.letter {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    padding:
+        calc(var(--paper-padding-desktop) + env(safe-area-inset-top))
+        calc(var(--paper-padding-desktop) + env(safe-area-inset-right))
+        calc(var(--paper-padding-desktop) + env(safe-area-inset-bottom))
+        calc(var(--paper-padding-desktop) + env(safe-area-inset-left));
+    box-sizing: border-box;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Typography */
+.letter h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.letter p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+/* Open state */
+.open .flap {
+    transform: rotateX(180deg);
+}
+
+.open .letter {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ---------- MOBILE OPTIMIZATION ---------- */
+@media (max-width: 480px) {
+    .envelope-container {
+        width: 240px;
+        height: 160px;
+    }
+
+    .label {
+        font-size: 14px;
+        bottom: 28px;
+        left: 18px;
+    }
+
+    .letter {
+        padding:
+            calc(var(--paper-padding-mobile) + env(safe-area-inset-top))
+            calc(var(--paper-padding-mobile) + env(safe-area-inset-right))
+            calc(var(--paper-padding-mobile) + env(safe-area-inset-bottom))
+            calc(var(--paper-padding-mobile) + env(safe-area-inset-left));
+    }
+
+    .letter h1 {
+        font-size: 1.6rem;
+    }
+
+    .letter p {
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope-wrapper">
+    <div class="envelope-container" onclick="toggleEnvelope()">
+        <div class="envelope">
+            <div class="label">To: Fiona</div>
+            <div class="flap"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Fullscreen Letter -->
+<div class="letter" onclick="toggleEnvelope()">
+    <h1>My dear Fiona,</h1>
+
+    <p>
+		No mere words, not even abstract philosophical concepts, 
+		can begin to express the feeling of appreciation and gratefulness I have that you came into my life. 
+		Ever since you waltzed into my world that day wearing baggy jeans and a brown jacket, my grey world began to take on color in the most peculiar yet beautiful way. <br><br>
+
+		I love how you make me feel, especially when you show some affection. Even a simple "😚" is enough to keep me smiling from ear to ear like an ape 
+		-- even more so when we see each other, and you seem to appear more beautiful for each day that passes. 
+		Accordingly, the subtle signs of showing you care, I find it endearing. Your love is silent, 
+		but it is grounded and calm. I also admire how proactive and firm you are in your dispositions, 
+		showcasing your strength as a person. You have all these amazing qualities that make me look up to you, 
+		inspiring me to become a better man — a frame worthy of showcasing your magnificent petals. The day you said to make it official, 
+		I could not wipe an idiotic smile off my face. Why? Because I have met a girl so amazing and beautiful, and now I can call her mine. <br><br>
+		
+		Additionally, thank you for putting up with me even when my thoughts and assumptions have been spiraling out of control as of late. 
+		The patience you have for my shortcomings, I notice it and appreciate it. Even when you have seen the lamest and most stupid parts of me, 
+		you still chose me. Rest assured, I will work to be better. <br><br>
+		
+		If there were a thousand lifetimes, I would come find you in each one, too. Heck, I would look for you in the next thousand as well, 
+		loving and choosing you in every route, timeline, and story. After all, you are the radiant hue of my world, my muse, 
+		my inspiration for betterment, and my Kaguya ^⁠_⁠^<br><br>
+
+
+		Fiona, as we reach our first month as a couple, I say this with absolute certainty — <strong>I love you, and I commit myself to you and our relationship.</strong> <br><br>
+
+		Happy Monthsary! See you later :> <br>
+	</p>
+    <p>
+        <br>Loving you always,<br>
+        <strong>Feliz </strong>
+    </p>
+
+</div>
+
+<!-- Background Music -->
+<audio id="letterMusic" loop>
+    <source src="Pulso.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let isOpen = false;
+const music = document.getElementById('letterMusic');
+
+function toggleEnvelope() {
+    isOpen = !isOpen;
+    document.body.classList.toggle('open');
+
+    if (isOpen) {
+        music.currentTime = 0;
+        music.play().catch(() => {});
+    } else {
+        music.pause();
+    }
+}
+</script>
+
+</body>
+</html>
